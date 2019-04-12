@@ -1,5 +1,9 @@
+var chestData;
 
-function GenerateChests(){
+function generateChests(){
+
+    getChestData();
+
     var fieldNames = ["Surface","Gate of Guidance"];
     var lootChestCounts = [7,9];
     var coinChestCounts =[3,2];
@@ -19,7 +23,21 @@ function GenerateChests(){
 
 }
 
-function WhichChest(event){
+function getChestData(){
+    var file = "ChestList.json";
+    var fr = new FileReader();
+    fr.readAsText(file);
+    fr.onload = parseChestData;
+}
+// tbh not 100% sure why i need a closure here but whatever
+function parseChestData(file){
+    return function(e){
+        chestData = JSON.parse(e.target.result);
+    }
+
+}
+
+function whichChest(event){
     if(event.button == 0 && !event.shiftKey){
         event.target.className = "lit-chest";
     } else if(event.button == 0 && event.shiftKey){
