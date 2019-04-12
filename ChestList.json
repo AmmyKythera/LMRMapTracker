@@ -9,6 +9,86 @@ var chestData = {
             "name":"Gate of Guidance",
             "lootChests":9,
             "coinChests":2
+        },
+        {
+            "name":"Mausoleum of the Giants",
+            "lootChests":4,
+            "coinChests":1
+        },
+        {
+            "name":"Temple of the Sun",
+            "lootChests":8,
+            "coinChests":1
+        },
+        {
+            "name":"Spring in the Sky",
+            "lootChests":7,
+            "coinChests":1
+        },
+        {
+            "name":"Inferno Cavern",
+            "lootChests":5,
+            "coinChests":2
+        },
+        {
+            "name":"Chamber of Extinction",
+            "lootChests":5, //One mural
+            "coinChests":1
+        },
+        {
+            "name":"Twin Labyrinths",
+            "lootChests":5,
+            "coinChests":3
+        },
+        {
+            "name":"Endless Corridor",
+            "lootChests":3,
+            "coinChests":1
+        },
+        {
+            "name":"Shrine of the Mother",
+            "lootChests":6,
+            "coinChests":1
+        },
+        {
+            "name":"Gate of Illusion",
+            "lootChests":6,
+            "coinChests":2
+        },
+        {
+            "name":"Graveyard of the Giants",
+            "lootChests":6, // One Mural
+            "coinChests":1
+        },
+        {
+            "name":"Temple of Moonlight",
+            "lootChests":6,
+            "coinChests":1
+        },
+        {
+            "name":"Tower of the Goddess",
+            "lootChests":5,
+            "coinChests":2
+        },
+        {
+            "name":"Tower of Ruin",
+            "lootChests":5,
+            "coinChests":1
+        },
+        {
+            "name":"Chamber of Birth",
+            "lootChests":6,
+            "coinChests":3
+        },
+        {
+            "name":"Dimensional Corridor",
+            "lootChests":4, //One mural
+            "coinChests":1
+        },
+        {
+            "name":"Gate of Time",
+            "lootChests":1,
+            "coinChests":0
         }
     ]
 }
