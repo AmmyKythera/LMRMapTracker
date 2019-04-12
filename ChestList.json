@@ -1,0 +1,14 @@
+{
+    "fields":[
+        {
+            "name":"Surface",
+            "lootChests":7,
+            "coinChests":3
+        },
+        {
+            "name":"Gate of Guidance",
+            "lootChests":9,
+            "coinChests":2
+        }
+    ]
+}
