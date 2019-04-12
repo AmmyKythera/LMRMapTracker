@@ -4,11 +4,19 @@ function generateChests(){
         document.getElementById("main").innerHTML += "<div id=\""+chestData.fields[field].name+"\">";
         document.getElementById("main").innerHTML += "<h2 class=\"fieldname\" id=\""+chestData.fields[field].name+"\">"+chestData.fields[field].name+"</h2>";
         for(var j=0; j<chestData.fields[field].lootChests; j++){
-            document.getElementById("main").innerHTML += "<img src=\"chest.png\" id=\""+chestData.fields[field].name+j+"\" class=\"unlit-chest\" />";
+            document.getElementById("main").innerHTML += "<img src=\"chest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+j+"\" class=\"unlit-chest\" />";
+            if(j%3 == 2){
+                document.getElementById("main").innerHTML += "<br />"; // temp hack for not looking bad
+            }
         }
+        document.getElementById("main").innerHTML += "<br />"; // temp hack for not looking bad
+        
         for(var j=0; j<chestData.fields[field].coinChests; j++){
             console.debug("looping");
-            document.getElementById("main").innerHTML += "<img src=\"coinchest.png\" id=\""+chestData.fields[field].name+j+"\" class=\"unlit-chest\" />";
+            document.getElementById("main").innerHTML += "<img src=\"coinchest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+"C"+j+"\" class=\"unlit-chest\" />";
+            if(j%3 == 2){
+                document.getElementById("main").innerHTML += "<br />"; // temp hack for not looking bad
+            }
         }
         document.getElementById("main").innerHTML += "</div>";
     }
