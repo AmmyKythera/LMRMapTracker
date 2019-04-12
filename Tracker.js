@@ -1,5 +1,3 @@
-var chestData;
-
 function generateChests(){
 
     getChestData();
@@ -19,20 +17,6 @@ function generateChests(){
             document.getElementById("main").innerHTML += "<img src=\"coinchest.png\" id=\""+fieldNames[i]+j+"\" class=\"unlit-chest\" />";
         }
         document.getElementById("main").innerHTML += "</div>";
-    }
-
-}
-
-function getChestData(){
-    var file = "ChestList.json";
-    var fr = new FileReader();
-    fr.readAsText(file);
-    fr.onload = parseChestData;
-}
-// tbh not 100% sure why i need a closure here but whatever
-function parseChestData(file){
-    return function(e){
-        chestData = JSON.parse(e.target.result);
     }
 
 }
