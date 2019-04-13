@@ -1,28 +1,35 @@
+// Actually create the Images/Interface after body load
 function generateChests(){
-
+    
     for(var field in chestData.fields){
-        document.getElementById("main").innerHTML += "<div id=\""+chestData.fields[field].name+"\">";
-        document.getElementById("main").innerHTML += "<h2 class=\"fieldname\" id=\""+chestData.fields[field].name+"\">"+chestData.fields[field].name+"</h2>";
+        var html = "";
+        html += "<div id=\""+chestData.fields[field].name+"\">";
+        html += "<h2 class=\"fieldname\" id=\""+chestData.fields[field].name+"\">"+chestData.fields[field].name+"</h2>";
+
         for(var j=0; j<chestData.fields[field].lootChests; j++){
-            document.getElementById("main").innerHTML += "<img src=\"chest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+j+"\" class=\"unlit-chest\" />";
+            //Have to use a regex for replace because reasons
+            html += "<img src=\"chest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+j+"\" class=\"unlit-chest\" />";
             if(j%3 == 2){
-                document.getElementById("main").innerHTML += "<br />"; // temp hack for not looking bad
+                html += "<br />"; // temp hack for not looking bad
             }
         }
-        document.getElementById("main").innerHTML += "<br />"; // temp hack for not looking bad
+
+        html += "<br />"; // temp hack for not looking bad
         
-        for(var j=0; j<chestData.fields[field].coinChests; j++){
-            console.debug("looping");
-            document.getElementById("main").innerHTML += "<img src=\"coinchest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+"C"+j+"\" class=\"unlit-chest\" />";
+        for(var j=0; j<chestData.fields[field].coinChests; j++){            
+            html += "<img src=\"coinchest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+"C"+j+"\" class=\"unlit-chest\" />";
             if(j%3 == 2){
-                document.getElementById("main").innerHTML += "<br />"; // temp hack for not looking bad
+                html += "<br />"; // temp hack for not looking bad
             }
         }
-        document.getElementById("main").innerHTML += "</div>";
+
+        html += "</div>";
+        document.getElementById("main").innerHTML += html;
     }
 
 }
 
+//Just updates chest graphic to colored/uncolored
 function whichChest(event){
     if(event.button == 0 && !event.shiftKey){
         event.target.className = "lit-chest";
