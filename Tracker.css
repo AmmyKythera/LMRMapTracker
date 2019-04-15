@@ -6,3 +6,13 @@ img.lit-chest{
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 }
+.num-box{
+    position:relative;
+    top:-30px;
+    left:25px;
+    background-color:black;
+    color:white;
+    width: 20px;
+    height: 20px;
+    text-align:center;
+}

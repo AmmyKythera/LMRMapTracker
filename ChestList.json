@@ -11,6 +11,7 @@ var chestData = {
         {
             "name":"Mausoleum of the Giants",
             "lootChests":5
+        },
         {
             "name":"Temple of the Sun",
             "lootChests":9
