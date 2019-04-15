@@ -1,5 +1,5 @@
 var chestData = {
-    "fields":[
+    "fields":{
         "Surface":{
             "name":"Surface",
             "lootChests":10,
@@ -90,5 +90,5 @@ var chestData = {
             "lootChests":1,
             "currChests":0    
         }
-    ]
+    }
 }
