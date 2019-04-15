@@ -7,7 +7,7 @@ function generateChests(){
         html += "<h2 class=\"fieldname\" id=\""+chestData.fields[field].name+"\">"+chestData.fields[field].name+"</h2>";
         
         html += "<img src=\"chest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+"\" class=\"lit-chest\" />";
-        html += "<div class=\"num-box\">"+chestData.fields[field].lootChests+"</div>";
+        html += "<div class=\"num-box\">"+(chestData.fields[field].lootChests-chestData.fields[field].currChests)+"</div>";
         /*for(var j=0; j<chestData.fields[field].lootChests; j++){
             //Have to use a regex for replace because reasons
             html += "<img src=\"chest.png\" id=\""+chestData.fields[field].name.replace(/ /g,"")+j+"\" class=\"unlit-chest\" />";
@@ -24,9 +24,23 @@ function generateChests(){
 
 //Just updates chest graphic to colored/uncolored
 function whichChest(event){
-    if(event.button == 0 && !event.shiftKey){
+    var changedField = event.target.parentNode.id; //Get the parentID, which should be field name
+
+    if(event.button == 0 && !event.shiftKey){ //leftclick
         event.target.className = "unlit-chest";
+        for(var field in chestData.fields){
+            if(chestData.fields[field].name == changeField){
+                chestData.fields[field].currChests=0;
+            }
+        }  
     } else if(event.button == 0 && event.shiftKey){
+        for(var field in chestData.fields){
+            if(chestData.fields[field].name == changeField && chestData.fields[field].currChests != chestData.fields[field].lootChests){
+                chestData.fields[field].currChests+=1;
+            }
+        }  
         event.target.className = "lit-chest";
     }
+    
+      
 }
