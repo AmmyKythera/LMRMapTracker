@@ -1,91 +1,91 @@
 var chestData = {
     "fields":[
-        {
+        "Surface":{
             "name":"Surface",
             "lootChests":10,
             "currChests":0          
         },
-        {
+        "Gate of Guidance":{
             "name":"Gate of Guidance",
             "lootChests":11,
             "currChests":0    
         },
-        {
+        "Mausoleum of the Giants":{
             "name":"Mausoleum of the Giants",
             "lootChests":5,
             "currChests":0    
         },
-        {
+        "Temple of the Sun":{
             "name":"Temple of the Sun",
             "lootChests":9,
             "currChests":0    
         },
-        {
+        "Spring in the Sky":{
             "name":"Spring in the Sky",
             "lootChests":8,
             "currChests":0    
         },
-        {
+        "Inferno Cavern":{
             "name":"Inferno Cavern",
             "lootChests":7,
             "currChests":0    
         },
-        {
+        "Chamber of Extinction":{
             "name":"Chamber of Extinction",
             "lootChests":6,
             "currChests":0     //One mural
         },
-        {
+        "Twin Labyrinths":{
             "name":"Twin Labyrinths",
             "lootChests":8,
             "currChests":0    
         },
-        {
+        "Endless Corridor":{
             "name":"Endless Corridor",
             "lootChests":4,
             "currChests":0    
         },
-        {
+        "Shrine of the Mother":{
             "name":"Shrine of the Mother",
             "lootChests":7,
             "currChests":0    
         },
-        {
+        "Gate of Illusion":{
             "name":"Gate of Illusion",
             "lootChests":8,
             "currChests":0    
         },
-        {
+        "Graveyard of the Giants":{
             "name":"Graveyard of the Giants",
             "lootChests":7,
             "currChests":0     // One Mural
         },
-        {
+        "Temple of Moonlight":{
             "name":"Temple of Moonlight",
             "lootChests":7,
             "currChests":0    
         },
-        {
+        "Tower of the Goddess":{
             "name":"Tower of the Goddess",
             "lootChests":7,
             "currChests":0    
         },
-        {
+        "Tower of Ruin":{
             "name":"Tower of Ruin",
             "lootChests":6,
             "currChests":0    
         },
-        {
+        "Chamber of Birth":{
             "name":"Chamber of Birth",
             "lootChests":9,
             "currChests":0    
         },
-        {
+        "Dimensional Corridor":{
             "name":"Dimensional Corridor",
             "lootChests":5,
             "currChests":0     //One mural
         },
-        {
+        "Gate of Time":{
             "name":"Gate of Time",
             "lootChests":1,
             "currChests":0    
